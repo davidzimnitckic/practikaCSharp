@@ -1,0 +1,11 @@
+<Window x:Class="CinemaBooking.Views.EditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Редактирование" Height="200" Width="300">
+
+    <StackPanel Margin="10">
+        <TextBlock Text="Редактирование брони"/>
+        <Button Content="Сохранить" Click="Save_Click"/>
+    </StackPanel>
+
+</Window>

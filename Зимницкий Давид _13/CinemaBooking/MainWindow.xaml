@@ -1,0 +1,57 @@
+﻿<Window x:Class="CinemaBooking.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Кинотеатр" Height="400" Width="600">
+
+    <DockPanel>
+
+        <!-- МЕНЮ -->
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Файл">
+                <MenuItem Header="Выход" Click="Exit_Click"/>
+            </MenuItem>
+
+            <MenuItem Header="Фильмы"/>
+            <MenuItem Header="Зал"/>
+            <MenuItem Header="Настройки"/>
+        </Menu>
+
+        <!-- ПАНЕЛЬ ИНСТРУМЕНТОВ -->
+        <ToolBar DockPanel.Dock="Top">
+            <Button Content="Забронировать"
+                    Command="{Binding BookTicketCommand}"
+                    Click="Book_Click"/>
+
+            <Button Content="Изменить"
+                    Command="{Binding EditTicketCommand}"
+                    Click="Edit_Click"/>
+
+            <Button Content="Отменить"
+                    Command="{Binding CancelTicketCommand}"
+                    Click="Cancel_Click"/>
+        </ToolBar>
+
+        <!-- ОСНОВНЫЕ КНОПКИ -->
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+
+            <Button Content="Забронировать билет"
+                    Margin="5"
+                    Width="200"
+                    Command="{Binding BookTicketCommand}"
+                    Click="Book_Click"/>
+
+            <Button Content="Изменить бронь"
+                    Margin="5"
+                    Width="200"
+                    Command="{Binding EditTicketCommand}"
+                    Click="Edit_Click"/>
+
+            <Button Content="Отменить бронь"
+                    Margin="5"
+                    Width="200"
+                    Command="{Binding CancelTicketCommand}"
+                    Click="Cancel_Click"/>
+        </StackPanel>
+
+    </DockPanel>
+</Window>
