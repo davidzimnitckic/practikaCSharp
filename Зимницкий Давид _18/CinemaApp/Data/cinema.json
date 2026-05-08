@@ -1,0 +1,31 @@
+{
+  "Sessions": [
+    {
+      "Movie": {
+        "Title": "Avatar 2",
+        "Genre": "Fantasy",
+        "Duration": 180
+      },
+      "Time": "18:00",
+      "Price": 15
+    },
+    {
+      "Movie": {
+        "Title": "Batman",
+        "Genre": "Action",
+        "Duration": 150
+      },
+      "Time": "20:00",
+      "Price": 12
+    },
+    {
+      "Movie": {
+        "Title": "Interstellar",
+        "Genre": "Sci-Fi",
+        "Duration": 170
+      },
+      "Time": "22:00",
+      "Price": 18
+    }
+  ]
+}
