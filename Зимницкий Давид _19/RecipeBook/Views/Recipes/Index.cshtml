@@ -1,0 +1,16 @@
+﻿@model List<RecipeBook.Models.Recipe>
+
+<h2>Список рецептов</h2>
+
+<ul>
+    @foreach (var recipe in Model)
+    {
+        <li>
+            <a href="/Recipes/View/@recipe.Id">
+                @recipe.Title
+            </a>
+        </li>
+    }
+</ul>
+
+<a href="/Recipes/Create">Добавить рецепт</a>
