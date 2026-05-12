@@ -1,0 +1,36 @@
+﻿@model RecipeBook.ViewModels.RecipeViewModel
+
+<h2>Добавление рецепта</h2>
+
+<form method="post">
+
+    <div>
+        <label>Название</label>
+        <br />
+        <input asp-for="Title" />
+        <span asp-validation-for="Title"></span>
+    </div>
+
+    <br />
+
+    <div>
+        <label>Описание</label>
+        <br />
+        <textarea asp-for="Description"></textarea>
+        <span asp-validation-for="Description"></span>
+    </div>
+
+    <br />
+
+    <div>
+        <label>Ингредиенты</label>
+        <br />
+        <textarea asp-for="Ingredients"></textarea>
+        <span asp-validation-for="Ingredients"></span>
+    </div>
+
+    <br />
+
+    <button type="submit">Добавить</button>
+
+</form>

@@ -1,0 +1,38 @@
+﻿@model List<RecipeBook.Models.Recipe>
+
+<h2>Список рецептов</h2>
+
+@if (TempData["Message"] != null)
+{
+    <p>@TempData["Message"]</p>
+}
+
+<form method="get">
+
+    <input type="text"
+           name="ingredient"
+           value="@ViewBag.SearchText"
+           placeholder="Поиск по ингредиенту" />
+
+    <button type="submit">Поиск</button>
+
+</form>
+
+<hr />
+
+<ul>
+    @foreach (var recipe in Model)
+    {
+        <li>
+            <b>@recipe.Title</b>
+            <br />
+            @recipe.Description
+            <br />
+            Ингредиенты: @recipe.Ingredients
+        </li>
+
+        <br />
+    }
+</ul>
+
+<a href="/Recipes/Create">Добавить рецепт</a>
