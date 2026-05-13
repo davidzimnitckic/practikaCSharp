@@ -1,0 +1,44 @@
+﻿@model List<RecipeBook.Models.Recipe>
+
+<h2>Рецепты</h2>
+
+<a href="/Recipes/Create">Добавить рецепт</a>
+
+<hr />
+
+<div style="display:flex; flex-wrap:wrap; gap:20px;">
+
+    @foreach (var recipe in Model)
+    {
+        <div style="
+            border:1px solid gray;
+            padding:15px;
+            width:300px;
+            border-radius:10px;">
+
+            <h3>@recipe.Title</h3>
+
+            <p>
+                <b>Ингредиенты:</b><br />
+                @recipe.Ingredients
+            </p>
+
+            <p>
+                <b>Инструкция:</b><br />
+                @recipe.Instructions
+            </p>
+
+            <a href="/Recipes/Edit/@recipe.Id">
+                Редактировать
+            </a>
+
+            <br /><br />
+
+            <a href="/Recipes/Delete/@recipe.Id">
+                Удалить
+            </a>
+
+        </div>
+    }
+
+</div>

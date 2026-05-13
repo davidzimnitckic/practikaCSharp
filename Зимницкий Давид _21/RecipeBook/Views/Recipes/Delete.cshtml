@@ -1,0 +1,23 @@
+﻿@model RecipeBook.Models.Recipe
+
+<h2>Удаление рецепта</h2>
+
+<p>Вы уверены?</p>
+
+<h3>@Model.Title</h3>
+
+<form method="post" asp-action="DeleteConfirmed">
+
+    <input type="hidden" asp-for="Id" />
+
+    <button type="submit">
+        Удалить
+    </button>
+
+</form>
+
+<br />
+
+<a href="/Recipes">
+    Отмена
+</a>

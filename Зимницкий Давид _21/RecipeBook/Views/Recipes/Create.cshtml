@@ -1,0 +1,35 @@
+﻿@model RecipeBook.Models.Recipe
+
+<h2>Добавление рецепта</h2>
+
+<form method="post">
+
+    <div>
+        <label>Название</label>
+        <br />
+        <input asp-for="Title" />
+    </div>
+
+    <br />
+
+    <div>
+        <label>Ингредиенты</label>
+        <br />
+        <textarea asp-for="Ingredients"></textarea>
+    </div>
+
+    <br />
+
+    <div>
+        <label>Инструкция</label>
+        <br />
+        <textarea asp-for="Instructions"></textarea>
+    </div>
+
+    <br />
+
+    <button type="submit">
+        Сохранить
+    </button>
+
+</form>
